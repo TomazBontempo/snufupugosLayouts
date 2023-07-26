@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*HEADER*/
+header {
+  background: #000000;
+  padding: 20px 0;
+}
+
+.box {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.logo {
+  width: 15%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer;
+  background: url("../img/hlogo1.png") no-repeat;
+  transition: 1s all;
+}
+
+/*HOME*/
+.vessel {
+  padding: 3em 0;
+  background: #271841;
+}
+/*images*/
+.container {
+  position: relative;
+  padding: 15px;
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: #0e0e10d3;
+  border-radius: 25px;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 15px;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  width: 40px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to left, transparent 0%, rgb(149, 20, 255) 200%);
+  opacity: 0.1;
+  transition: all 600ms ease-in-out;
+  border-radius: 25px;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  width: 40px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  opacity: 0.1;
+  transition: all 600ms ease-in-out;
+  left: auto;
+  right: 0;
+  background: linear-gradient(to right, transparent 0%, rgb(149, 20, 255) 200%);
+  border-radius: 25px;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.item {
+  width: 75%;
+  opacity: 0.3;
+  transition: all 600ms ease-in-out;
+  padding-right: 40px;
+}
+
+.current-item {
+  opacity: 1;
+}
+
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+/*FOOTER*/
+footer {
+  text-align: center;
+  background: black;
+  padding: 40px 0;
+}
+
+.fLogo {
+  width: 10%;
+  padding-bottom: 10px;
+}
+
+.e-mailadress {
+  color: #ffffff;
+  font-size: 15px;
+  margin: 20px 0 0;
+}
+
+.contatos li {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  transition: 0.5s all;
+  margin: 0 0.5%;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.contatos li:hover {
+  transform: scale(1.2);
+}
+
+.icons {
+  width: 60px;
+  height: 60px;
+}
