@@ -146,7 +146,7 @@ footer {
 }
 
 .fLogo {
-  width: 10%;
+  width: 250px;
   padding-bottom: 10px;
 }
 
@@ -191,5 +191,9 @@ footer {
 
   .ad2 {
     font-size: 10px;
+  }
+
+  .fLogo {
+    width: 150px;
   }
 }
