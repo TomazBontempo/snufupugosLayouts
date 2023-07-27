@@ -173,3 +173,22 @@ footer {
   width: 30px;
   height: 30px;
 }
+
+/*Resp*/
+
+@media (max-width: 1000px) {
+  .box {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .ad {
+    font-size: 35px;
+  }
+
+  .ad2 {
+    font-size: 10px;
+  }
+}
