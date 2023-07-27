@@ -59,3 +59,28 @@ function animarTexto() {
 }
 
 animarTexto();
+
+function animarImagem() {
+  const imagemAnimada = document.querySelector(".imagemFooter");
+  let isC1 = true;
+
+  // Função que atualiza a imagem animada com um fade
+  function atualizarImagem() {
+    imagemAnimada.style.opacity = 0;
+
+    setTimeout(function () {
+      if (isC1) {
+        imagemAnimada.src = "imgs/c2.png";
+      } else {
+        imagemAnimada.src = "imgs/c1.png";
+      }
+      isC1 = !isC1;
+      imagemAnimada.style.opacity = 1;
+    }, 1500);
+  }
+
+  // Inicia a animação
+  setInterval(atualizarImagem, 10000);
+}
+
+animarImagem();

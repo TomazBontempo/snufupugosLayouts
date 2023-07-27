@@ -145,9 +145,11 @@ footer {
   padding: 40px 0;
 }
 
-.fLogo {
+.imagemFooter {
   width: 250px;
   padding-bottom: 10px;
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .e-mailadress {
@@ -193,7 +195,7 @@ footer {
     font-size: 10px;
   }
 
-  .fLogo {
+  .imagemFooter {
     width: 150px;
   }
 }
