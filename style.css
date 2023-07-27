@@ -184,6 +184,10 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .arrow-left,
+  .arrow-right {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 650px) {
