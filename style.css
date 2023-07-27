@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
+@font-face {
+  font-family: gothic;
+  src: url(Font/Sketch\ Gothic\ School.ttf);
+}
+
+@font-face {
+  font-family: glitch;
+  src: url(Font/Doctor\ Glitch.otf);
 }
 
 /*HEADER*/
@@ -15,23 +21,40 @@ header {
 }
 
 .box {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-  width: 25%;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
+  width: 500px;
+  display: flex;
   cursor: pointer;
   background: url("../img/hlogo1.png") no-repeat;
   transition: 1s all;
 }
 
-/*HOME*/
+.chamada {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.ad {
+  font-family: gothic;
+  color: #5d3899;
+  font-size: 90px;
+}
+
+.ad2 {
+  font-family: glitch;
+  color: white;
+  font-size: 40px;
+}
+
+/*MAIN*/
 .vessel {
   padding: 3em 0;
   background: #271841;

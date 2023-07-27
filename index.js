@@ -31,3 +31,31 @@ controls.forEach((control) => {
     items[currentItem].classList.add("current-item");
   });
 });
+
+function animarTexto() {
+  const textoAnimado = document.querySelector(".chamada");
+
+  // Array com os textos que serão animados
+  const textos = [
+    "<span class='ad2'>Icon&nbsp;&nbsp;banner&nbsp;&nbsp;e&nbsp;&nbsp;buttons&nbsp;&nbsp;por&nbsp;&nbsp;</span><span class='ad'>R$50,00</span>",
+    "<span class='ad2'>Icon&nbsp;&nbsp;banner&nbsp;&nbsp;and&nbsp;&nbsp;buttons&nbsp;&nbsp;for&nbsp;&nbsp;</span><span class='ad'>$10.00</span>",
+  ];
+
+  // Índice do texto atual na lista de textos
+  let indiceAtual = 0;
+
+  // Função que atualiza o texto animado com um fade
+  function atualizarTexto() {
+    textoAnimado.style.opacity = 0;
+    setTimeout(function () {
+      textoAnimado.innerHTML = textos[indiceAtual];
+      indiceAtual = (indiceAtual + 1) % textos.length;
+      textoAnimado.style.opacity = 1;
+    }, 1500);
+  }
+
+  // Inicia a animação
+  setInterval(atualizarTexto, 10000);
+}
+
+animarTexto();
