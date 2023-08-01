@@ -1,18 +1,22 @@
+// Gallery controls//
 const controls = document.querySelectorAll(".control");
-let currentItem = 0;
 const items = document.querySelectorAll(".item");
 const maxItems = items.length;
+let currentItem = 0;
 
+//Função que cria a variavel de controle e observa o evento de click do botão da seta esquerda.//
 controls.forEach((control) => {
   control.addEventListener("click", (e) => {
     isLeft = e.target.classList.contains("arrow-left");
 
+    //controla a direção, ou looping do carosel de acordo com a condição//
     if (isLeft) {
       currentItem -= 1;
     } else {
       currentItem += 1;
     }
 
+    //Realizam o looping dependendo do lado da galeria.
     if (currentItem >= maxItems) {
       currentItem = 0;
     }
@@ -21,13 +25,12 @@ controls.forEach((control) => {
       currentItem = maxItems - 1;
     }
 
+    //Controla a animação, removendo/adicionando o foco através da classe e caracteristicas da informação.
     items.forEach((item) => item.classList.remove("current-item"));
-
     items[currentItem].scrollIntoView({
       behavior: "smooth",
       inline: "center",
     });
-
     items[currentItem].classList.add("current-item");
   });
 });
@@ -58,8 +61,6 @@ function animarTexto() {
   setInterval(atualizarTexto, 10000);
 }
 
-animarTexto();
-
 function animarImagem() {
   const imagemAnimada = document.querySelector(".imagemFooter");
   let isC1 = true;
@@ -83,4 +84,5 @@ function animarImagem() {
   setInterval(atualizarImagem, 10000);
 }
 
+animarTexto();
 animarImagem();
